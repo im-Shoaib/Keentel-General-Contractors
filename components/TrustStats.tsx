@@ -48,7 +48,7 @@ export default function TrustStats() {
         <div className="trust_grid">
           <div className="trust_card">
             <div className="trust_number-wrapper">
-              <span className="trust_number" data-target="20" data-suffix="+">0</span>
+              <span className="trust_number" data-target="30" data-suffix="+">0</span>
             </div>
             <p className="trust_label">Years building<br />Tampa Bay</p>
           </div>

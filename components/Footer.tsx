@@ -92,6 +92,19 @@ export default function Footer() {
         <div className="sec10-bottom-bar">
           <div className="sec10-bottom-bar__inner">
             <p className="sec10-bottom-bar__copyright">© 2026 Copyright keentelgeneralcontractors</p>
+            <p>
+  Developed & Managed by{" "}
+  <span>
+    <a
+      href="https://dexoradigital.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ color: "white", textDecoration: "none" }}
+    >
+      Dexora Digital
+    </a>
+  </span>
+</p>
             <div className="sec10-bottom-bar__links">
               <a href="/terms">Term and Condition</a>
               <span className="sep">|</span>

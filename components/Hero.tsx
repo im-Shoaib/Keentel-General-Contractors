@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="sec1-hero__content">
           <span className="sec1-hero__badge">
             <span className="sec1-hero__badge-dot"></span>
-            Tampa Bay • Since 2003
+            Tampa Bay
           </span>
           <h1 className="sec1-hero__title">
             Your project deserves a contractor who's done this <span style={{ color: "#a6238f" }}>1,000 times</span>.
@@ -29,7 +29,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="sec1-hero__floating-badge">
-          <strong>20+</strong> Years<br />Experience
+          <strong>30+</strong> Years<br />Experience
         </div>
       </div>
     </section>
