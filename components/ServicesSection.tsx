@@ -42,9 +42,34 @@ export default function ServicesSection() {
     <section className="sec2-services" ref={sectionRef}>
       <div className="sec2-container">
         <div className="sec2-header">
-          <p className="sec2-eyebrow">What we do</p>
+          <p className="sec2-eyebrow">WHAT WE DO</p>
           <h2 className="sec2-title">One contractor.<br />Every project.</h2>
-          <p className="sec2-subtitle">Stop juggling subs and chasing invoices. Six service lines, one accountable team, one final walk‑through.</p>
+          <p className="sec2-subtitle">One supply chain, one licensed team, one point of accountability — from permit to punch list.</p>
+
+          {/* New descriptive block */}
+          <div className="sec2-description-block">
+            <div className="sec2-description-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <div className="sec2-description-text">
+              <p>
+                At Keentel General Contractors, we manage the full scope of construction and contracting services — design, build, electrical, remodeling, and finishing — all under one roof. We serve residential, commercial, and industrial clients across Tampa Bay and throughout Florida, with the same licensed team handling every trade on your project.
+              </p>
+              <p className="sec2-highlight">
+                We have seen firsthand how divided project management leads to delays and cost overruns. Our integrated approach eliminates that risk entirely.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Sub-heading */}
+        <div style={{ textAlign: "center", margin: "50px 0 30px" }}>
+          <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 700, color: "var(--color-navy)" }}>Our Construction Services</h3>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "1rem", color: "var(--color-text-muted)", maxWidth: "700px", margin: "10px auto 0" }}>From Tampa Bay to every corner of Florida, we deliver the full scope of construction services that homeowners, businesses, and industrial facilities depend on.</p>
         </div>
 
         <div className="sec2-grid">
@@ -57,9 +82,9 @@ export default function ServicesSection() {
               </svg>
             </div>
             <div className="sec2-card-body">
-              <span className="sec2-card-category">Design</span>
+              <span className="sec2-card-category">Design Services</span>
               <h3 className="sec2-card-title">Design Services</h3>
-              <p className="sec2-card-desc">Concept to permit-ready plans. Residential and commercial.</p>
+              <p className="sec2-card-desc">Permit-ready drawings, architectural coordination, and full project planning — every detail defined before construction begins.</p>
               <Link href="/design-services" className="sec2-card-link">Learn more <span aria-hidden="true">→</span></Link>
             </div>
           </div>
@@ -73,9 +98,9 @@ export default function ServicesSection() {
               </svg>
             </div>
             <div className="sec2-card-body">
-              <span className="sec2-card-category">Build</span>
+              <span className="sec2-card-category">Build Services</span>
               <h3 className="sec2-card-title">Build Services</h3>
-              <p className="sec2-card-desc">Ground-up construction managed by one accountable team.</p>
+              <p className="sec2-card-desc">Ground-up construction managed by one licensed team. Every trade, every timeline, every Florida Building Code standard — delivered.</p>
               <Link href="/build-services" className="sec2-card-link">Learn more <span aria-hidden="true">→</span></Link>
             </div>
           </div>
@@ -91,9 +116,9 @@ export default function ServicesSection() {
               </svg>
             </div>
             <div className="sec2-card-body">
-              <span className="sec2-card-category">Emergency</span>
+              <span className="sec2-card-category">Emergency 24/7</span>
               <h3 className="sec2-card-title">Emergency 24/7</h3>
-              <p className="sec2-card-desc">Storm, fire, flood, structural — 30‑60 minute response.</p>
+              <p className="sec2-card-desc">Storm, flood, fire, or structural failure — 30 to 60-minute response across Florida. We stabilize, document, and plan the fix in a single visit.</p>
               <Link href="/emergency-services" className="sec2-card-link">Learn more <span aria-hidden="true">→</span></Link>
             </div>
           </div>
@@ -107,9 +132,9 @@ export default function ServicesSection() {
               </svg>
             </div>
             <div className="sec2-card-body">
-              <span className="sec2-card-category">Remodel</span>
+              <span className="sec2-card-category">Remodeling</span>
               <h3 className="sec2-card-title">Remodeling</h3>
-              <p className="sec2-card-desc">Kitchens, baths, additions. Built to last, finished on time.</p>
+              <p className="sec2-card-desc">Kitchens, bathrooms, additions, and full interior renovations — one contractor managing everything from demolition to final finish.</p>
               <Link href="/remodeling-services" className="sec2-card-link">Learn more <span aria-hidden="true">→</span></Link>
             </div>
           </div>
@@ -125,7 +150,7 @@ export default function ServicesSection() {
             <div className="sec2-card-body">
               <span className="sec2-card-category">Electrical</span>
               <h3 className="sec2-card-title">Electrical</h3>
-              <p className="sec2-card-desc">Residential, commercial, industrial. The original Keentel craft.</p>
+              <p className="sec2-card-desc">Residential, commercial, and industrial electrical services — self-performed by our licensed electricians, never outsourced.</p>
               <Link href="/electrical-services" className="sec2-card-link">Learn more <span aria-hidden="true">→</span></Link>
             </div>
           </div>
@@ -139,9 +164,9 @@ export default function ServicesSection() {
               </svg>
             </div>
             <div className="sec2-card-body">
-              <span className="sec2-card-category">Finish</span>
+              <span className="sec2-card-category">Finish &amp; Warranty</span>
               <h3 className="sec2-card-title">Finish &amp; Warranty</h3>
-              <p className="sec2-card-desc">Punch list to 5‑year warranty. We don’t leave until it’s right.</p>
+              <p className="sec2-card-desc">Final invoice only after every punch list item is resolved. All work backed by a written 5-year warranty.</p>
               <Link href="/warranty" className="sec2-card-link">Learn more <span aria-hidden="true">→</span></Link>
             </div>
           </div>

@@ -26,7 +26,6 @@ export default function ServiceAreaMap() {
     );
     observer.observe(section);
 
-    // Interactive region clicks
     const regions = section.querySelectorAll(".sec3-region");
     regions.forEach((region) => {
       const link = region.getAttribute("data-link");
@@ -46,10 +45,13 @@ export default function ServiceAreaMap() {
       <div className="sec3-area__inner">
         <div className="sec3-area__content" ref={contentRef}>
           <p className="sec3-area__eyebrow">Service Area</p>
-          <h2 className="sec3-area__title">Serving Tampa and<br />Surrounding Areas</h2>
+          <h2 className="sec3-area__title">Serving Tampa Bay and<br />All of Florida</h2>
           <p className="sec3-area__desc">
-            We proudly serve Tampa, Hillsborough, Pinellas, Pasco, Polk, Sarasota, and Manatee counties. Our locally‑owned team understands
-            the unique electrical needs of Florida homes and businesses — from hurricane preparedness to solar panel installations and EV chargers.
+            Headquartered in Tampa Bay, we provide licensed general contracting services across all 67 Florida counties. Our in-house crews cover residential, commercial, and industrial projects statewide — same licensed team, same warranty, same standard of delivery regardless of location.
+          </p>
+          <p className="sec3-area__desc" style={{ marginTop: "-16px" }}>
+            <strong>Primary Base:</strong> Hillsborough · Pinellas · Pasco · Polk · Hernando · Manatee · Sarasota<br />
+            <strong>Statewide:</strong> Miami-Dade · Broward · Palm Beach · Orange · Duval · Brevard · Lee · Collier · Alachua · Volusia · and all remaining Florida counties
           </p>
           <div className="sec3-area__actions">
             <a href="tel:8133950000" className="sec3-area__btn">
@@ -58,6 +60,7 @@ export default function ServiceAreaMap() {
               </svg>
               Call Us Now
             </a>
+            <a href="/service-areas" className="sec3-area__link">View Service Areas →</a>
           </div>
         </div>
 

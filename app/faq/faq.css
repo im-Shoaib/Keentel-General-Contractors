@@ -9,7 +9,7 @@
             --color-text: #2d2d33;
             --color-text-light: #5c5a61;
             --color-text-muted: #7a7880;
-            --font-heading: 'Georgia', 'Times New Roman', serif;
+            --font-heading: "Montserrat", sans-serif;
             --font-body: 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;
             --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
             --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);

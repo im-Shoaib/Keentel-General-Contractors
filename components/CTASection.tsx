@@ -32,9 +32,9 @@ export default function CTASection() {
     <section className="cta-section" ref={sectionRef}>
       <div className="cta-container">
         <div className="cta-left">
-          <p className="cta-eyebrow">Let's build</p>
+          <p className="cta-eyebrow">Your next project starts with a conversation.</p>
           <h2 className="cta-title">Your next project starts with a conversation.</h2>
-          <p className="cta-subtext">Free estimate. No pressure. Usually back within 4 business hours.</p>
+          <p className="cta-subtext">Free estimates, no pressure, no obligation.</p>
         </div>
 
         <div className="cta-right">
@@ -48,16 +48,24 @@ export default function CTASection() {
             <Link href="/contact" className="cta-btn">Request Free Estimate</Link>
             <ul className="cta-perks">
               <li className="cta-perk">
-                <svg className="cta-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg className="cta-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
                 Free, no-obligation quote
               </li>
               <li className="cta-perk">
-                <svg className="cta-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                4-hour response
+                <svg className="cta-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                Florida licensed &amp; fully insured (CGC · CPC · CFC)
               </li>
               <li className="cta-perk">
-                <svg className="cta-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
-                Licensed &amp; insured
+                <svg className="cta-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="M9 12l2 2 4-4"></path>
+                </svg>
+                Available 7 days a week
               </li>
             </ul>
           </div>

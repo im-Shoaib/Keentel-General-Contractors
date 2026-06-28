@@ -48,10 +48,9 @@ export default function CraftSection() {
       <div className="craft-container">
         <div className="craft-header">
           <p className="craft-eyebrow">Our original craft</p>
-          <h2 className="craft-title">30 years as Tampa's electricians.<br />Now your full‑service GC.</h2>
+          <h2 className="craft-title">30 years as Florida's electricians.<br />Now your full‑service GC.</h2>
           <p className="craft-description">
-            From a single outlet to a 50,000 sq ft industrial fit‑out — every Keentel project still runs
-            through master electricians. Code‑compliant. Hurricane‑ready. Inspection‑passed the first time.
+            Before Keentel became a general contractor, we spent decades building electrical infrastructure across Florida — commercial buildings, industrial facilities, and residential communities statewide. That technical depth is the foundation of every project we deliver today.
           </p>
         </div>
 
@@ -68,9 +67,9 @@ export default function CraftSection() {
               <ul className="craft-card-list">
                 <li>Panel upgrades &amp; rewiring</li>
                 <li>EV charger installation</li>
-                <li>Standby generators</li>
-                <li>Smart home integration</li>
-                <li>Lighting design</li>
+                <li>Generator hookup &amp; transfer switch</li>
+                <li>Smart home wiring</li>
+                <li>Code compliance upgrades</li>
               </ul>
               <Link href="/quote-residential" className="craft-card-cta">
                 Get a quote <span aria-hidden="true">→</span>
@@ -90,9 +89,9 @@ export default function CraftSection() {
               <ul className="craft-card-list">
                 <li>New construction wiring</li>
                 <li>Office &amp; retail buildouts</li>
-                <li>Emergency power &amp; UPS</li>
+                <li>Temporary power for active sites</li>
+                <li>LED lighting conversion</li>
                 <li>Maintenance contracts</li>
-                <li>Code compliance</li>
               </ul>
               <Link href="/quote-commercial" className="craft-card-cta">
                 Get a quote <span aria-hidden="true">→</span>
@@ -112,9 +111,9 @@ export default function CraftSection() {
               <ul className="craft-card-list">
                 <li>High‑voltage installation</li>
                 <li>Motor control systems</li>
-                <li>Energy efficiency upgrades</li>
-                <li>24/7 facility support</li>
-                <li>Inspections &amp; audits</li>
+                <li>Compliance testing &amp; audits</li>
+                <li>24/7 support contracts</li>
+                <li>Equipment disconnects &amp; reconnects</li>
               </ul>
               <Link href="/quote-industrial" className="craft-card-cta">
                 Get a quote <span aria-hidden="true">→</span>
@@ -146,7 +145,7 @@ export default function CraftSection() {
             <svg className="craft-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
             </svg>
-            <span>24/7 Repairs</span>
+            <span>24/7 Emergency Repairs</span>
           </div>
         </div>
       </div>

@@ -46,8 +46,7 @@ export default function WhyKeentel() {
             <p className="why-eyebrow">Why Keentel</p>
             <h2 className="why-title">The contractor your neighbors already trust.</h2>
             <p className="why-story">
-              Twenty years ago we started as electricians. We were tired of watching homeowners
-              get burned by no‑show GCs. So we became the GC we wished existed.
+              At Keentel General Contractors, we take pride in being the go-to licensed GC for residential, commercial, and industrial projects across Florida.
             </p>
           </div>
 
@@ -94,7 +93,7 @@ export default function WhyKeentel() {
               </svg>
             </div>
             <h3 className="why-card-title">Licensed &amp; Insured</h3>
-            <p className="why-card-desc">CGC1234567. Full liability and workers' comp.</p>
+            <p className="why-card-desc">Fully licensed (CGC · CPC · CFC) and comprehensively insured across Florida. Every crew member on your property is covered.</p>
             <span className="why-card-accent"></span>
           </div>
 
@@ -112,7 +111,7 @@ export default function WhyKeentel() {
               </svg>
             </div>
             <h3 className="why-card-title">24/7 Response</h3>
-            <p className="why-card-desc">Nights, weekends, holidays. 30‑60 min on emergencies.</p>
+            <p className="why-card-desc">Nights, weekends, holidays — we answer. Emergency calls receive confirmed on-site response across our full Florida service area.</p>
             <span className="why-card-accent"></span>
           </div>
 
@@ -129,7 +128,7 @@ export default function WhyKeentel() {
               </svg>
             </div>
             <h3 className="why-card-title">5‑Year Warranty</h3>
-            <p className="why-card-desc">If it's not right, we come back. Written, not whispered.</p>
+            <p className="why-card-desc">Every project backed in writing. If something isn't right within 5 years, we return and fix it — no invoices, no conditions.</p>
             <span className="why-card-accent"></span>
           </div>
 
@@ -149,7 +148,7 @@ export default function WhyKeentel() {
               </svg>
             </div>
             <h3 className="why-card-title">One Team, One Bill</h3>
-            <p className="why-card-desc">No juggling subs. One point of contact, start to finish.</p>
+            <p className="why-card-desc">No separate subcontractors. No split invoices. One contract covers all trades. One project manager answers for all of it.</p>
             <span className="why-card-accent"></span>
           </div>
         </div>
