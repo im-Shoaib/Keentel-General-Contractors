@@ -54,40 +54,43 @@ export default function CitrusPage() {
     });
 
     // Counter animation for 500+ stat
-    const countUpTarget = document.querySelector(
-      ".tampa-count-up-target"
-    ) as HTMLElement | null;
-    let countUpDone = false;
+const countUpTarget = document.querySelector(
+  ".tampa-count-up-target"
+) as HTMLElement | null;
+let countUpDone = false;
 
-    const counterObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !countUpDone && countUpTarget) {
-            countUpDone = true;
-            const target = parseInt(countUpTarget.getAttribute("data-count") || "500");
-            const duration = 1800;
-            const startTime = performance.now();
-            const startVal = 0;
+const counterObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !countUpDone && countUpTarget) {
+        countUpDone = true;
+        // ✅ Store a local reference to the element
+        const targetElement = countUpTarget;
+        const target = parseInt(targetElement.getAttribute("data-count") || "500");
+        const duration = 1800;
+        const startTime = performance.now();
+        const startVal = 0;
 
-            function updateCounter(currentTime: number) {
-              const elapsed = currentTime - startTime;
-              const progress = Math.min(elapsed / duration, 1);
-              const eased = 1 - Math.pow(1 - progress, 3);
-              const current = Math.round(startVal + (target - startVal) * eased);
-              countUpTarget.textContent = current.toString();
-              if (progress < 1) {
-                requestAnimationFrame(updateCounter);
-              } else {
-                countUpTarget.textContent = target.toString();
-              }
-            }
+        function updateCounter(currentTime: number) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = Math.round(startVal + (target - startVal) * eased);
+          // Use the local reference
+          targetElement.textContent = current.toString();
+          if (progress < 1) {
             requestAnimationFrame(updateCounter);
-            counterObserver.unobserve(entry.target);
+          } else {
+            targetElement.textContent = target.toString();
           }
-        });
-      },
-      { threshold: 0.5 }
-    );
+        }
+        requestAnimationFrame(updateCounter);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
 
     if (countUpTarget) {
       const statItem = countUpTarget.closest(".tampa-stat-item");
