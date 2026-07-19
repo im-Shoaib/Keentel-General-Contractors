@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import './about.css';
 
 // Industry icons (inline SVG, Font Awesome style)
-const industryIcons: Record<string, JSX.Element> = {
+const industryIcons: Record<string, React.JSX.Element> = {
   'Commercial Offices': (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="4" y="2" width="16" height="20" rx="2" />
