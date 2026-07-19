@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './service-areas.css';
 
 /* ============================================================================
@@ -291,7 +291,7 @@ function Reveal({
   children: React.ReactNode;
   className?: string;
   delay?: 1 | 2 | 3 | 4 | 5 | 6;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [inView, setInView] = useState(false);
