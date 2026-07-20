@@ -68,12 +68,35 @@ const industryIcons: Record<string, React.ReactNode> = {
       <polyline points="9 22 9 12 15 12 15 22" />
     </svg>
   ),
+  'Manufacturing': (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M2 20h20" />
+      <path d="M5 20V8l5-4 4 4 5-4v12" />
+      <rect x="8" y="10" width="3" height="6" rx="1" />
+      <rect x="13" y="10" width="3" height="6" rx="1" />
+    </svg>
+  ),
+  'Warehouses': (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+      <polyline points="9 22 9 12 15 12 15 22" />
+    </svg>
+  ),
+  'Government': (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+      <path d="M2 17l10 5 10-5" />
+      <path d="M2 12l10 5 10-5" />
+    </svg>
+  ),
 };
 
 export default function AboutPage() {
   const [revealed, setRevealed] = useState<Set<string>>(new Set());
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
+  const [statsAnimated, setStatsAnimated] = useState(false);
 
+  // IntersectionObserver for section reveals
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -94,12 +117,54 @@ export default function AboutPage() {
     };
   }, []);
 
+  // Stats number animation
+  useEffect(() => {
+    if (revealed.has('about-stats') && !statsAnimated) {
+      setStatsAnimated(true);
+      const numbers = document.querySelectorAll('.about-stats-number');
+      numbers.forEach((num) => {
+        const target = parseInt(num.getAttribute('data-target') || '0', 10);
+        const suffix = num.getAttribute('data-suffix') || '';
+        const duration = 2000;
+        const startTime = performance.now();
+
+        const update = (currentTime: number) => {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const current = Math.floor(eased * target);
+          num.textContent = current + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          }
+        };
+        requestAnimationFrame(update);
+      });
+    }
+  }, [revealed, statsAnimated]);
+
   const isRevealed = (id: string) => revealed.has(id);
 
+  // 12 industries total (original 9 + 3 new)
   const industriesList = [
     'Commercial Offices', 'Industrial & Manufacturing', 'Warehousing & Distribution',
     'Retail & Mixed-Use', 'Restaurants & Hospitality', 'Healthcare',
     'Educational & Institutional', 'Multi-Family Developments', 'Large Residential Projects',
+    'Manufacturing', 'Warehouses', 'Government'
+  ];
+
+  // Services for "What We Build"
+  const servicesList = [
+    'Commercial Construction',
+    'Industrial Construction',
+    'Design-Build Projects',
+    'Tenant Improvements',
+    'Commercial Renovations',
+    'Facility Expansions',
+    'Multi-Family Developments',
+    'Large Residential Projects',
+    'Electrical Contracting',
+    'Emergency Restoration'
   ];
 
   // Helper to generate staggered delays for text elements
@@ -126,13 +191,20 @@ export default function AboutPage() {
             commercial, industrial, and large-scale residential construction projects that are built
             to perform today and create value for years to come.
           </p>
-          
-          <a href="/contact" className="about-hero-cta animate-text" style={{ animationDelay: getDelay(4) }}>
-            <span>Book a Consultation</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
+          <div className="about-hero-buttons animate-text" style={{ animationDelay: getDelay(3) }}>
+            <a href="/contact" className="about-hero-cta">
+              <span>Book a Consultation</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="/services" className="about-hero-cta about-hero-cta--secondary">
+              <span>Explore Our Services</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -165,57 +237,97 @@ export default function AboutPage() {
               commitment to quality, allowing clients to work with one trusted construction partner
               from concept through completion.
             </p>
+            <p className="about-who-sub animate-text" style={{ animationDelay: getDelay(4) }}>
+              At Keentel General Contractors, we believe every successful project begins with thoughtful
+              planning, disciplined execution, and complete accountability. Whether it's new construction,
+              a complex renovation, a design-build project, or a facility expansion, our focus remains the
+              same—deliver quality work, maintain clear communication, and keep every project moving forward.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ==================== APPROACH (TIMELINE) ==================== */}
+      {/* ==================== STATS STRIP ==================== */}
       <section
-        id="about-approach"
+        id="about-stats"
         ref={(el) => { sectionsRef.current[2] = el; }}
-        className={`about-approach ${isRevealed('about-approach') ? 'about-reveal' : ''}`}
+        className={`about-stats ${isRevealed('about-stats') ? 'about-reveal' : ''}`}
       >
-        <div className="about-approach-bg-pattern" />
-        <div className="about-approach-content">
-          <span className="about-approach-tag animate-text" style={{ animationDelay: getDelay(0) }}>Our Process</span>
-          <h2 className="about-approach-heading animate-text" style={{ animationDelay: getDelay(1) }}>How We Deliver Excellence</h2>
-          <div className="about-timeline">
-            <div className="about-timeline-item">
-              <div className="about-timeline-marker"><span>01</span></div>
-              <div className="about-timeline-card animate-text" style={{ animationDelay: getDelay(2) }}>
-                <h4>Strategic Planning</h4>
-                <p>We analyze every detail before breaking ground, aligning objectives and resources.</p>
+        <div className="about-stats-inner">
+          <div className="about-stats-grid">
+            <div className="about-stats-card">
+              <div className="about-stats-number-wrapper">
+                <span className="about-stats-number" data-target="500" data-suffix="+">0</span>
               </div>
+              <p className="about-stats-label">Projects Completed</p>
             </div>
-            <div className="about-timeline-item">
-              <div className="about-timeline-marker"><span>02</span></div>
-              <div className="about-timeline-card animate-text" style={{ animationDelay: getDelay(3) }}>
-                <h4>Clear Objectives</h4>
-                <p>Milestones and KPIs are set to keep everyone aligned and accountable.</p>
+            <div className="about-stats-card">
+              <div className="about-stats-number-wrapper">
+                <span className="about-stats-number" data-target="30" data-suffix="+">0</span>
               </div>
+              <p className="about-stats-label">Years of Industry Experience</p>
             </div>
-            <div className="about-timeline-item">
-              <div className="about-timeline-marker"><span>03</span></div>
-              <div className="about-timeline-card animate-text" style={{ animationDelay: getDelay(4) }}>
-                <h4>Coordinated Execution</h4>
-                <p>We orchestrate every trade and timeline with precision, reducing risk.</p>
+            <div className="about-stats-card">
+              <div className="about-stats-number-wrapper">
+                <span className="about-stats-number" data-target="10" data-suffix="+">0</span>
               </div>
+              <p className="about-stats-label">Construction Services</p>
             </div>
-            <div className="about-timeline-item">
-              <div className="about-timeline-marker"><span>04</span></div>
-              <div className="about-timeline-card animate-text" style={{ animationDelay: getDelay(5) }}>
-                <h4>Continuous Communication</h4>
-                <p>Transparency from start to finish ensures no surprises.</p>
+            <div className="about-stats-card">
+              <div className="about-stats-number-wrapper">
+                <span className="about-stats-number" data-target="100" data-suffix="%">0</span>
               </div>
+              <p className="about-stats-label">Commitment to Quality &amp; Safety</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ==================== VALUES (INTERACTIVE CARDS) ==================== */}
+      {/* ==================== WHAT WE BUILD ==================== */}
+<section
+  id="about-build"
+  ref={(el) => { sectionsRef.current[3] = el; }}
+  className={`about-build ${isRevealed('about-build') ? 'about-reveal' : ''}`}
+>
+  <div className="about-build-container">
+    <div className="about-build-grid-2col">
+      {/* LEFT: text */}
+      <div className="about-build-left">
+        <span className="about-build-tag animate-text" style={{ animationDelay: getDelay(0) }}>
+          What We Build
+        </span>
+        <h2 className="about-build-heading animate-text" style={{ animationDelay: getDelay(1) }}>
+          Our Construction Services
+        </h2>
+        <p className="about-build-sub animate-text" style={{ animationDelay: getDelay(2) }}>
+          Our team delivers construction solutions across a wide range of project types,
+          each supported by the same commitment to quality, safety, and professional
+          project delivery.
+        </p>
+      </div>
+      {/* RIGHT: service list */}
+      <div className="about-build-right">
+        <ul className="about-build-list">
+          {servicesList.map((service, idx) => (
+            <li key={idx} className="about-build-item animate-text" style={{ animationDelay: getDelay(3 + idx * 0.06) }}>
+              <span className="about-build-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              {service}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+      {/* ==================== VALUES (What We Stand For) ==================== */}
       <section
         id="about-values"
-        ref={(el) => { sectionsRef.current[3] = el; }}
+        ref={(el) => { sectionsRef.current[4] = el; }}
         className={`about-values ${isRevealed('about-values') ? 'about-reveal' : ''}`}
       >
         <div className="about-values-header">
@@ -230,7 +342,7 @@ export default function AboutPage() {
               </svg>
             </div>
             <h4>Quality</h4>
-            <p>Workmanship that stands the test of time.</p>
+            <p>Every project is delivered with attention to workmanship, performance, and long-term durability.</p>
           </div>
           <div className="about-value-card animate-text" style={{ animationDelay: getDelay(3) }}>
             <div className="about-value-icon">
@@ -239,7 +351,7 @@ export default function AboutPage() {
               </svg>
             </div>
             <h4>Accountability</h4>
-            <p>We own every outcome, from plan to completion.</p>
+            <p>We take ownership of planning, coordination, communication, and execution from beginning to end.</p>
           </div>
           <div className="about-value-card animate-text" style={{ animationDelay: getDelay(4) }}>
             <div className="about-value-icon">
@@ -248,7 +360,7 @@ export default function AboutPage() {
               </svg>
             </div>
             <h4>Safety</h4>
-            <p>People and property protected always.</p>
+            <p>Protecting people, property, and the job site remains a priority throughout every phase of construction.</p>
           </div>
           <div className="about-value-card animate-text" style={{ animationDelay: getDelay(5) }}>
             <div className="about-value-icon">
@@ -257,7 +369,7 @@ export default function AboutPage() {
               </svg>
             </div>
             <h4>Collaboration</h4>
-            <p>Success through strong partnerships.</p>
+            <p>Successful projects are built through strong partnerships with owners, consultants, subcontractors, and stakeholders.</p>
           </div>
         </div>
       </section>
@@ -265,7 +377,7 @@ export default function AboutPage() {
       {/* ==================== INDUSTRIES MARQUEE ==================== */}
       <section
         id="about-industries"
-        ref={(el) => { sectionsRef.current[4] = el; }}
+        ref={(el) => { sectionsRef.current[5] = el; }}
         className={`about-industries ${isRevealed('about-industries') ? 'about-reveal' : ''}`}
       >
         <h3 className="about-industries-heading animate-text" style={{ animationDelay: getDelay(0) }}>Industries We Serve</h3>
@@ -279,12 +391,15 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
+        <div className="about-industries-cta animate-text" style={{ animationDelay: getDelay(1) }}>
+          <a href="/industries" className="about-industries-link">View All Industries →</a>
+        </div>
       </section>
 
-      {/* ==================== WHY CHOOSE ==================== */}
+      {/* ==================== WHY CHOOSE KEENTEL ==================== */}
       <section
         id="about-why"
-        ref={(el) => { sectionsRef.current[5] = el; }}
+        ref={(el) => { sectionsRef.current[6] = el; }}
         className={`about-why ${isRevealed('about-why') ? 'about-reveal' : ''}`}
       >
         <div className="about-why-grid">
@@ -324,20 +439,116 @@ export default function AboutPage() {
               </li>
               <li className="animate-text" style={{ animationDelay: getDelay(8) }}>
                 <span className="about-why-check" />
-                Long-Term Relationships
+                Long-Term Client Relationships
               </li>
             </ul>
             <p className="about-why-outro animate-text" style={{ animationDelay: getDelay(9) }}>
-              From the first conversation to final turnover, we deliver with professionalism and integrity.
+              From the first conversation to final project turnover, we remain focused on delivering
+              construction solutions with professionalism, integrity, and accountability.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ==================== CTA (solid gradient, no image) ==================== */}
+      {/* ==================== CONTACT FORM ==================== */}
+      <section
+        id="about-contact"
+        ref={(el) => { sectionsRef.current[7] = el; }}
+        className={`about-contact ${isRevealed('about-contact') ? 'about-reveal' : ''}`}
+      >
+        <div className="about-contact-container">
+          <div className="about-contact-grid">
+            <div className="about-contact-left">
+              <span className="about-contact-eyebrow animate-text" style={{ animationDelay: getDelay(0) }}>Get in Touch</span>
+              <h2 className="about-contact-title animate-text" style={{ animationDelay: getDelay(1) }}>Start Your Project</h2>
+              <p className="about-contact-desc animate-text" style={{ animationDelay: getDelay(2) }}>
+                Tell us about your project, and our team will provide the guidance, planning, and construction
+                expertise you need to move forward with confidence.
+              </p>
+              <p className="about-contact-desc animate-text" style={{ animationDelay: getDelay(3) }}>
+                Whether you're planning a new development, expanding an existing facility, or transforming a
+                property through renovation, Keentel General Contractors is ready to help.
+              </p>
+            </div>
+            <div className="about-contact-right animate-text" style={{ animationDelay: getDelay(4) }}>
+              <form className="about-contact-form">
+                <div className="about-contact-row">
+                  <div className="about-contact-group">
+                    <label htmlFor="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="John Doe" />
+                  </div>
+                  <div className="about-contact-group">
+                    <label htmlFor="company">Company</label>
+                    <input type="text" id="company" placeholder="Your Company" />
+                  </div>
+                </div>
+                <div className="about-contact-row">
+                  <div className="about-contact-group">
+                    <label htmlFor="email">Email Address</label>
+                    <input type="email" id="email" placeholder="john@example.com" />
+                  </div>
+                  <div className="about-contact-group">
+                    <label htmlFor="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="(813) 555-0000" />
+                  </div>
+                </div>
+                <div className="about-contact-row">
+                  <div className="about-contact-group">
+                    <label htmlFor="projectType">Project Type</label>
+                    <select id="projectType">
+                      <option value="">Select Type</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="industrial">Industrial</option>
+                      <option value="institutional">Institutional</option>
+                      <option value="multi-family">Multi‑Family</option>
+                      <option value="residential">Large Residential</option>
+                      <option value="renovation">Renovation</option>
+                      <option value="emergency">Emergency Restoration</option>
+                    </select>
+                  </div>
+                  <div className="about-contact-group">
+                    <label htmlFor="projectLocation">Project Location</label>
+                    <input type="text" id="projectLocation" placeholder="City, State" />
+                  </div>
+                </div>
+                <div className="about-contact-row">
+                  <div className="about-contact-group">
+                    <label htmlFor="budget">Estimated Budget</label>
+                    <select id="budget">
+                      <option value="">Select Budget</option>
+                      <option value="under50k">Under $50,000</option>
+                      <option value="50k-100k">$50k – $100k</option>
+                      <option value="100k-250k">$100k – $250k</option>
+                      <option value="250k-500k">$250k – $500k</option>
+                      <option value="500k-1m">$500k – $1M</option>
+                      <option value="over1m">Over $1M</option>
+                    </select>
+                  </div>
+                  <div className="about-contact-group">
+                    {/* Placeholder for alignment */}
+                  </div>
+                </div>
+                <div className="about-contact-group about-contact-group--full">
+                  <label htmlFor="details">Project Details</label>
+                  <textarea id="details" rows={3} placeholder="Tell us about your project..."></textarea>
+                </div>
+                <button type="submit" className="about-contact-btn">
+                  Request a Consultation
+                  <svg className="about-contact-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== FINAL CTA ==================== */}
       <section
         id="about-cta"
-        ref={(el) => { sectionsRef.current[6] = el; }}
+        ref={(el) => { sectionsRef.current[8] = el; }}
         className={`about-cta ${isRevealed('about-cta') ? 'about-reveal' : ''}`}
       >
         <div className="about-cta-content">

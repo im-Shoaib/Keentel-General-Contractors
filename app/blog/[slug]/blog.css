@@ -770,3 +770,99 @@
     padding: 0 16px 40px;
   }
 }
+
+
+/* ─── BLOG TABLE STYLES ─── */
+.blog-content .table-wrapper {
+  overflow-x: auto;
+  margin: 28px 0 32px;
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid var(--color-border, #e2e8f0);
+  background: var(--color-white, #ffffff);
+  box-shadow: var(--shadow-sm, 0 2px 8px rgba(0,0,0,0.04));
+}
+
+.blog-content .comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  min-width: 600px;
+}
+
+.blog-content .comparison-table thead tr {
+  background: var(--color-navy, #0b1a2f);
+}
+
+.blog-content .comparison-table thead th {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-bottom: 2px solid var(--color-magenta, #a6238f);
+}
+
+.blog-content .comparison-table tbody tr {
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+  transition: background 0.15s ease;
+}
+
+.blog-content .comparison-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.blog-content .comparison-table tbody tr:hover {
+  background: var(--color-off-white, #f8fafc);
+}
+
+.blog-content .comparison-table tbody td {
+  padding: 14px 20px;
+  color: var(--color-text-light, #2a3f54);
+  vertical-align: top;
+}
+
+.blog-content .comparison-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--color-navy, #0b1a2f);
+  white-space: nowrap;
+  background: var(--color-off-white, #f8fafc);
+}
+
+.blog-content .comparison-table tbody td:last-child {
+  font-weight: 500;
+  color: var(--color-navy, #0b1a2f);
+}
+
+.blog-content .comparison-table tbody td:last-child strong {
+  color: var(--color-magenta, #a6238f);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .blog-content .comparison-table {
+    font-size: 0.85rem;
+    min-width: 480px;
+  }
+  .blog-content .comparison-table thead th,
+  .blog-content .comparison-table tbody td {
+    padding: 10px 14px;
+  }
+  .blog-content .comparison-table tbody td:first-child {
+    white-space: normal;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-content .comparison-table {
+    font-size: 0.75rem;
+    min-width: 360px;
+  }
+  .blog-content .comparison-table thead th,
+  .blog-content .comparison-table tbody td {
+    padding: 8px 10px;
+  }
+}

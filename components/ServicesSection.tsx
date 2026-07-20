@@ -14,11 +14,9 @@ export default function ServicesSection() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Reveal header
             const header = section.querySelector(".sec2-header");
             if (header) header.classList.add("sec2-revealed");
 
-            // Reveal cards with stagger
             const cards = section.querySelectorAll(".sec2-card");
             cards.forEach((card, i) => {
               setTimeout(() => {
@@ -60,17 +58,17 @@ export default function ServicesSection() {
       image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/12/b7/a7/70/3d/v1_E11/E117XMXQ.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=20003b9edc31e36d74968f93d6ef0b1e95c10dff80ac15c20849588fae7420b8",
     },
     {
-      title: "Commercial Renovations",
+      title: "Commercial Remodeling",
       desc: "Office remodels, tenant improvements, retail spaces, hospitality projects, and commercial property upgrades.",
       icon: "fa-building",
-      link: "/commercial-renovations",
+      link: "/commercial-remodeling",
       image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/eb/0d/fc/2e/d0/v1_E10/E10AMQTO.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=c688a8651543f9b76d6cd6071153d8baa48b22cc4cd99f68af5d43d3a4a0f666",
     },
     {
-      title: "Industrial Construction",
-      desc: "Construction services for warehouses, manufacturing facilities, distribution centers, and industrial infrastructure.",
-      icon: "fa-warehouse",
-      link: "/industrial-construction",
+      title: "Residential Remodeling",
+      desc: "Whole‑home renovations, kitchen and bath remodels, additions, and custom residential upgrades.",
+      icon: "fa-house-chimney",
+      link: "/residential-remodeling",
       image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/33/03/3b/af/53/v1_E10/E10AU2JL.jpg?w=800&cf_fit=scale-down&q=85&format=auto&s=42dcf0fc1b2812bc7ee5caafd3d01faf3def4de1adb5f4fd20936fd6492233dc",
     },
     {

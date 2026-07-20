@@ -48,7 +48,7 @@ export default function ContactSection() {
             </p>
           </div>
 
-          {/* RIGHT FORM – shorter, compact */}
+          {/* RIGHT FORM – all 8 fields */}
           <div className="contact-right">
             <form className="contact-form">
               <div className="contact-form-row">
@@ -86,6 +86,12 @@ export default function ContactSection() {
                   </select>
                 </div>
                 <div className="contact-form-group">
+                  <label htmlFor="projectLocation">Project Location</label>
+                  <input type="text" id="projectLocation" placeholder="City, State" />
+                </div>
+              </div>
+              <div className="contact-form-row">
+                <div className="contact-form-group">
                   <label htmlFor="budget">Estimated Budget</label>
                   <select id="budget">
                     <option value="">Select Budget</option>
@@ -96,6 +102,9 @@ export default function ContactSection() {
                     <option value="500k-1m">$500k – $1M</option>
                     <option value="over1m">Over $1M</option>
                   </select>
+                </div>
+                <div className="contact-form-group">
+                  {/* Placeholder for alignment – you could add another field if needed */}
                 </div>
               </div>
               <div className="contact-form-group contact-form-group--full">

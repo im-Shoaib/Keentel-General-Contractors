@@ -55,60 +55,60 @@ export default function RecentWorkSection() {
           {/* Project 1 */}
           <div className="recent-card">
             <div className="recent-card-image">
-              <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&h=400&fit=crop" alt="Hyde Park Kitchen" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop" alt="Commercial construction site" loading="lazy" />
               <div className="recent-card-overlay">
-                <span className="recent-card-category">Remodel</span>
-                <h3 className="recent-card-title">Hyde Park Kitchen</h3>
+                <span className="recent-card-category">Commercial</span>
+                <h3 className="recent-card-title">Office Building</h3>
               </div>
             </div>
           </div>
           {/* Project 2 */}
           <div className="recent-card">
             <div className="recent-card-image">
-              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" alt="Bayshore Office Buildout" loading="lazy" />
+              <img src="https://www.autodesk.com/blogs/construction/wp-content/uploads/2024/06/cost-to-build-a-warehouse-construction.jpg" alt="Construction workers on site" loading="lazy" />
               <div className="recent-card-overlay">
-                <span className="recent-card-category">Commercial</span>
-                <h3 className="recent-card-title">Bayshore Office Buildout</h3>
+                <span className="recent-card-category">Build</span>
+                <h3 className="recent-card-title">Warehouse Facility</h3>
               </div>
             </div>
           </div>
           {/* Project 3 */}
           <div className="recent-card">
             <div className="recent-card-image">
-              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=400&fit=crop" alt="Davis Islands Bath" loading="lazy" />
+              <img src="https://cdn.ezo.io/wp-content/uploads/2021/08/plant-asset-management.jpg" alt="Industrial construction" loading="lazy" />
               <div className="recent-card-overlay">
-                <span className="recent-card-category">Remodel</span>
-                <h3 className="recent-card-title">Davis Islands Bath</h3>
+                <span className="recent-card-category">Industrial</span>
+                <h3 className="recent-card-title">Manufacturing Plant</h3>
               </div>
             </div>
           </div>
           {/* Project 4 */}
           <div className="recent-card">
             <div className="recent-card-image">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7F7HHMjWWbtNT3LKyCwgyXSvLhD0orjd-XB-sf3WO3gQKEuhBsc3-Irqr&s=10" alt="Channelside Panel Upgrade" loading="lazy" />
+              <img src="https://www.belvanconstruction.com/wp-content/themes/belvan-construction/img/inner-commercial-services/Retail%20Store-1.png" alt="Commercial renovation" loading="lazy" />
               <div className="recent-card-overlay">
-                <span className="recent-card-category">Electrical</span>
-                <h3 className="recent-card-title">Channelside Panel Upgrade</h3>
+                <span className="recent-card-category">Renovation</span>
+                <h3 className="recent-card-title">Retail Storefront</h3>
               </div>
             </div>
           </div>
           {/* Project 5 */}
           <div className="recent-card">
             <div className="recent-card-image">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-m27e11EKwx-UlmZhJwsSFfYDmo4qHOgE91_0Kbwq4g&s" alt="South Tampa New Build" loading="lazy" />
+              <img src="https://www.investopedia.com/thmb/ufSCkKocZkeEG1jGNV8D-3jMR_o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-942487282-ae2da73b74aa4e868af3a6beac662e52.jpg" alt="Multi-family construction" loading="lazy" />
               <div className="recent-card-overlay">
-                <span className="recent-card-category">Build</span>
-                <h3 className="recent-card-title">South Tampa New Build</h3>
+                <span className="recent-card-category">Multi-Family</span>
+                <h3 className="recent-card-title">Apartment Complex</h3>
               </div>
             </div>
           </div>
           {/* Project 6 */}
           <div className="recent-card">
             <div className="recent-card-image">
-              <img src="https://cdn.nwe.io/files/x/a3/91/562b1c70991fab98dc042c17686e.jpg" alt="Storm Recovery — Clearwater" loading="lazy" />
+              <img src="https://cdn.prod.website-files.com/67b63dcbadb8f1376005d51f/68111103651e4854a9fba6e3_m50%20storm%20damage.jpg" alt="Emergency restoration" loading="lazy" />
               <div className="recent-card-overlay">
                 <span className="recent-card-category">Emergency</span>
-                <h3 className="recent-card-title">Storm Recovery — Clearwater</h3>
+                <h3 className="recent-card-title">Storm Recovery</h3>
               </div>
             </div>
           </div>

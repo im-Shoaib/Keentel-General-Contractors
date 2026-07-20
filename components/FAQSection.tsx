@@ -6,9 +6,8 @@ import Link from "next/link";
 export default function FAQSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const answerRefs = useRef<Map<number, HTMLDivElement>>(new Map());
-  const openIndexRef = useRef<number | null>(null); // no state, just a ref
+  const openIndexRef = useRef<number | null>(null);
 
-  // 1. Reveal animation (unchanged)
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
@@ -32,11 +31,9 @@ export default function FAQSection() {
     return () => observer.disconnect();
   }, []);
 
-  // 2. Close when clicking outside the whole section
   useEffect(() => {
     const handleOutside = (e: MouseEvent) => {
       if (sectionRef.current && !sectionRef.current.contains(e.target as Node)) {
-        // Close whatever is open
         const current = openIndexRef.current;
         if (current !== null) {
           const el = answerRefs.current.get(current);
@@ -52,13 +49,11 @@ export default function FAQSection() {
     return () => document.removeEventListener("click", handleOutside);
   }, []);
 
-  // 3. Toggle an answer – pure DOM, no React state
   const toggle = (index: number) => {
     const prev = openIndexRef.current;
     const answerEl = answerRefs.current.get(index);
     if (!answerEl) return;
 
-    // Close the previously open item
     if (prev !== null && prev !== index) {
       const prevAnswer = answerRefs.current.get(prev);
       if (prevAnswer) {
@@ -67,14 +62,11 @@ export default function FAQSection() {
       }
     }
 
-    // Toggle the clicked item
     if (prev === index) {
-      // It's already open → close it
       answerEl.style.maxHeight = "0px";
       answerEl.parentElement?.classList.remove("faq-open");
       openIndexRef.current = null;
     } else {
-      // Open it
       answerEl.style.maxHeight = answerEl.scrollHeight + 20 + "px";
       answerEl.parentElement?.classList.add("faq-open");
       openIndexRef.current = index;
@@ -88,6 +80,10 @@ export default function FAQSection() {
     { question: "Do you perform commercial renovations?", answer: "Yes. We complete office renovations, retail build-outs, tenant improvements, hospitality projects, and facility upgrades." },
     { question: "Do you offer emergency restoration services?", answer: "Yes. We provide restoration and reconstruction following fire, storm, water, and structural damage." },
     { question: "Can electrical services be included in my project?", answer: "Yes. Electrical contracting is available as part of our integrated construction services or as a standalone solution." },
+    { question: "What areas do you serve?", answer: "We serve all 67 counties in Florida, with a primary base in Tampa Bay and surrounding regions." },
+    { question: "How do you handle project budgeting?", answer: "We provide transparent estimates, track costs throughout the project, and work to keep your budget on target without compromising quality." },
+    { question: "Do you offer warranties on your work?", answer: "Yes. We stand behind our work with comprehensive warranties and a commitment to client satisfaction." },
+    { question: "How long does a typical project take?", answer: "Timelines vary based on scope and complexity. We'll provide a detailed schedule during the planning phase and keep you updated at every stage." },
   ];
 
   return (
@@ -106,7 +102,6 @@ export default function FAQSection() {
               data-faq-index={index}
               className="faq-item"
               onClick={(e) => {
-                // stop all propagation – we handle everything manually
                 e.stopPropagation();
                 e.preventDefault();
                 toggle(index);
@@ -127,7 +122,7 @@ export default function FAQSection() {
                   if (el) answerRefs.current.set(index, el);
                   else answerRefs.current.delete(index);
                 }}
-                onClick={(e) => e.stopPropagation()} // prevent toggling when clicking answer text
+                onClick={(e) => e.stopPropagation()}
               >
                 <p>{faq.answer}</p>
               </div>

@@ -48,15 +48,15 @@ export default function TrustStats() {
         <div className="trust_grid">
           <div className="trust_card">
             <div className="trust_number-wrapper">
-              <span className="trust_number" data-target="30" data-suffix="+">0</span>
+              <span className="trust_number" data-target="500" data-suffix="+">0</span>
             </div>
-            <p className="trust_label">Years Serving<br />Florida</p>
+            <p className="trust_label">Projects<br />Completed</p>
           </div>
           <div className="trust_card">
             <div className="trust_number-wrapper">
-              <span className="trust_number" data-target="500" data-suffix="+">0</span>
+              <span className="trust_number" data-target="30" data-suffix="+">0</span>
             </div>
-            <p className="trust_label">Projects<br />Delivered</p>
+            <p className="trust_label">Years of<br />Industry Experience</p>
           </div>
           <div className="trust_card">
             <div className="trust_number-wrapper">
@@ -66,9 +66,9 @@ export default function TrustStats() {
           </div>
           <div className="trust_card">
             <div className="trust_number-wrapper">
-              <span className="trust_number" data-target="24" data-suffix="/7">0</span>
+              <span className="trust_number" data-target="100" data-suffix="%">0</span>
             </div>
-            <p className="trust_label">Emergency<br />Response</p>
+            <p className="trust_label">Commitment to<br />Quality &amp; Safety</p>
           </div>
         </div>
       </div>
