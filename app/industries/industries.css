@@ -665,6 +665,11 @@
     margin-top: -40px;
     margin-left: auto;
     margin-right: 24px;
+    z-index: 1000;
+  }
+
+  .kgc-about__image{
+    height: 300px;
   }
 }
 

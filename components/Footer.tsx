@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="sec10-footer-col">
             <div className="sec10-footer-logo">
               <img
-                src="/assets/logo.png"
+                src="/assets/keentel-logo-footer.png"
                 alt="Keentel Electrical Contractors logo"
                 className="sec10-footer-logo__img"
               />

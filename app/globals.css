@@ -3778,7 +3778,6 @@
     width: 70%;
     height: 56px;
     border-radius: 8px;
-    background-color: var(--color-white);
     object-fit: contain;
     display: block;
 }
@@ -3986,42 +3985,73 @@
     color: rgba(255, 255, 255, 0.3);
 }
 
-/* Responsive */
+/* ========== FOOTER – RESPONSIVE MOBILE & TABLET ========== */
 @media (max-width: 768px) {
-    .sec10-main-footer__inner {
-        gap: 32px;
-    }
-    .sec10-bottom-bar__inner {
-        flex-direction: column;
-        text-align: center;
-    }
-    .sec10-pre-footer__text {
-        font-size: 1rem;
-    }
-    .sec10-footer-logo__img {
-        margin: 0 auto;
-    }
-    .sec10-footer-badge {
-        justify-content: center;
-    }
-    .sec10-footer-social {
-        justify-content: center;
-    }
-    .sec10-footer-col {
-        text-align: center;
-    }
-    .sec10-footer-contact__item {
-        justify-content: center;
-    }
-}
+  .sec10-main-footer__inner {
+    grid-template-columns: 1fr;          /* single column */
+    gap: 30px;
+    padding-bottom: 30px;
+  }
 
-@media (max-width: 480px) {
-    .sec10-main-footer {
-        padding: 40px 16px 0 16px;
-    }
-    .sec10-footer-logo__img {
-        width: 48px;
-        height: 48px;
-    }
-}
+  .sec10-footer-col {
+    text-align: center;
+  }
 
+  .sec10-footer-logo__img {
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .sec10-footer-badge {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .sec10-footer-social {
+    justify-content: center;
+  }
+
+  .sec10-footer-contact__item {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .sec10-footer-links {
+    text-align: center;
+    padding-left: 0 !important;          /* override inline style on the list */
+  }
+
+  .sec10-footer-links li {
+    display: block;                      /* each link on its own line */
+    margin-bottom: 8px;
+  }
+
+  .sec10-footer-col__title {
+    text-align: center;
+    padding-left: 0 !important;          /* override inline style on the title */
+  }
+
+  .sec10-pre-footer__text {
+    font-size: 1rem;
+  }
+
+  .sec10-bottom-bar__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .sec10-bottom-bar__links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .sec10-bottom-bar__links .sep {
+    display: none;                       /* optional: hides separators on mobile */
+  }
+
+  .sec10-main-footer {
+    padding: 40px 16px 0 16px;
+  }
+}
