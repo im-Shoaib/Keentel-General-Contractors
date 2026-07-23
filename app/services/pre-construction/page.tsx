@@ -170,19 +170,19 @@ export default function PreConstructionPage() {
       icon: faBuildingColumns,
       title: "Multi‑Family Developments",
       desc: "Apartment communities, condominium projects, and residential developments.",
-      image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/be/9f/e9/9c/df/v1_E10/E10BW9BS.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=edca7417d1de50a85d3ffc00879c90929aab910d11f397c23b8a79a30d0fa15b",
+      image: "https://static.wixstatic.com/media/1bdf38229a3e48f5aa5bf33a7c65ca92.jpg/v1/fill/w_568,h_378,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1bdf38229a3e48f5aa5bf33a7c65ca92.jpg",
     },
     {
       icon: faHouse,
       title: "Large Residential Projects",
       desc: "Luxury homes, custom residences, additions, and complete property transformations.",
-      image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/12/b7/a7/70/3d/v1_E11/E117XMXQ.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=82d802a8dd695cb8f143f605732dd6cf900e171af8f4c5aefc07c96e30932185",
+      image: "https://buildings.pk/wp-content/uploads/2023/08/Aerial-View-New.jpg",
     },
     {
       icon: faMaximize,
       title: "Facility Expansions",
       desc: "Projects that increase capacity while minimizing operational disruption.",
-      image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/9a/c3/7a/15/0e/v1_E10/E109TMD4.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=3a023dd7818f768211c3022ff35b0b7c46c2b59718bf3860d72efc4496042f44",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpl3s9lRnEY3GLpzJtTM3sjHfSE47VhCtDuWSHWDmv2PUBwm1Cks-_jiY&s=10",
     },
   ];
 

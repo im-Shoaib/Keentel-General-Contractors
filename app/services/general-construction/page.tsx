@@ -151,39 +151,39 @@ export default function GeneralConstructionPage() {
   const projectTypes = [
     {
       icon: faBuilding,
-      title: "Commercial Buildings",
-      desc: "Professional offices, retail developments, mixed-use properties, restaurants, and hospitality spaces.",
+      title: "Commercial Developments",
+      desc: "Office buildings, retail centers, mixed‑use developments, and business facilities.",
       image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/38/7f/c9/07/ca/v1_E10/E10AQCWB.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=0c948850b392c0ae2a54badb9913435d46fd281ebfc73bd19b935409b593367e",
     },
     {
       icon: faIndustry,
-      title: "Industrial Facilities",
-      desc: "Warehouses, manufacturing plants, logistics centers, distribution facilities, and operational infrastructure.",
+      title: "Industrial Projects",
+      desc: "Manufacturing plants, warehouses, logistics centers, and operational facilities.",
       image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/1a/da/d1/88/c0/v1_E10/E10CXB3Q.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=f444a31362c6942bb657dfee8c6d3150c8173a962660b5401a735b9ac69aafa8",
     },
     {
       icon: faSchool,
-      title: "Institutional Projects",
-      desc: "Educational facilities, healthcare buildings, government properties, and community developments.",
+      title: "Institutional Buildings",
+      desc: "Schools, healthcare facilities, municipal buildings, and public infrastructure.",
       image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/1da902e5-8bb7-4bc2-883f-e253ca487511/a1a5d319-de7c-4538-a255-42a41016f7fa.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=67e91452b6cb3cbf1373feb59b41849d9a27c86d06e45946b0a69adb60daa953",
+    },
+    {
+      icon: faBuildingColumns,
+      title: "Multi‑Family Developments",
+      desc: "Apartment communities, condominium projects, and residential developments.",
+      image: "https://static.wixstatic.com/media/1bdf38229a3e48f5aa5bf33a7c65ca92.jpg/v1/fill/w_568,h_378,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1bdf38229a3e48f5aa5bf33a7c65ca92.jpg",
+    },
+    {
+      icon: faHouse,
+      title: "Large Residential Projects",
+      desc: "Luxury homes, custom residences, additions, and complete property transformations.",
+      image: "https://buildings.pk/wp-content/uploads/2023/08/Aerial-View-New.jpg",
     },
     {
       icon: faMaximize,
       title: "Facility Expansions",
-      desc: "Building additions and operational expansions that increase capacity while minimizing disruption.",
-      image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/9a/c3/7a/15/0e/v1_E10/E109TMD4.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=3a023dd7818f768211c3022ff35b0b7c46c2b59718bf3860d72efc4496042f44",
-    },
-    {
-      icon: faBuildingColumns,
-      title: "Tenant Improvements",
-      desc: "Customized interior spaces designed to meet operational requirements, branding objectives, and future growth.",
-      image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/be/9f/e9/9c/df/v1_E10/E10BW9BS.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=edca7417d1de50a85d3ffc00879c90929aab910d11f397c23b8a79a30d0fa15b",
-    },
-    {
-      icon: faHouse,
-      title: "Large Residential Construction",
-      desc: "Luxury homes, custom residences, additions, and major residential renovations.",
-      image: "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/12/b7/a7/70/3d/v1_E11/E117XMXQ.jpg?w=1600&cf_fit=scale-down&q=85&format=auto&s=82d802a8dd695cb8f143f605732dd6cf900e171af8f4c5aefc07c96e30932185",
+      desc: "Projects that increase capacity while minimizing operational disruption.",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpl3s9lRnEY3GLpzJtTM3sjHfSE47VhCtDuWSHWDmv2PUBwm1Cks-_jiY&s=10",
     },
   ];
 
@@ -297,9 +297,7 @@ export default function GeneralConstructionPage() {
           <p className="gcs-hero-subtitle gcs-reveal gcs-reveal-delay-2">
             Every successful project depends on more than skilled construction—it requires careful planning, experienced leadership, and seamless coordination. Keentel General Contractors delivers comprehensive general construction services that transform concepts into high-quality, lasting spaces built around your goals, schedule, and budget.
           </p>
-          <p className="gcs-hero-subtitle gcs-hero-subtitle-small gcs-reveal gcs-reveal-delay-2">
-            Whether you're developing a new facility, expanding an existing property, or modernizing your infrastructure, we provide one trusted team to manage every stage of construction.
-          </p>
+          
           <div className="gcs-hero-cta-group gcs-reveal gcs-reveal-delay-3">
             <a href="#gcs-contact" className="gcs-btn gcs-btn-primary">
               Schedule a Consultation <FontAwesomeIcon icon={faArrowRight} className="gcs-btn-arrow" />

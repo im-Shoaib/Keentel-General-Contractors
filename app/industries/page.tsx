@@ -336,7 +336,7 @@ export default function IndustriesPage() {
               <div className="kgc-about__frame" />
               <img
                 className="kgc-about__image"
-                src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?w=1000&q=80&auto=format&fit=crop"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPTM0k8oHaevFh2-6oOFXB-HKB2-nHoHsdnsuwZxDVZlnijH9AmL1TBkE&s=10"
                 alt="Construction professionals reviewing plans on site"
                 loading="lazy"
               />

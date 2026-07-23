@@ -1,18 +1,20 @@
 // app/terms/page.tsx
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./TermsConditions.module.css";
 import {
   FaGlobe,
   FaCopyright,
   FaInfoCircle,
-  FaClipboardList,
-  FaExternalLinkAlt,
   FaShieldAlt,
+  FaLock,
+  FaExternalLinkAlt,
   FaExclamationCircle,
   FaGavel,
   FaSyncAlt,
+  FaBalanceScale,
+  FaEnvelope,
 } from "react-icons/fa";
 
 const TermsConditionsPage = () => {
@@ -38,85 +40,103 @@ const TermsConditionsPage = () => {
 
   const termsSections = [
     {
-      title: "Website Use",
+      title: "Use of Website and Services",
       icon: <FaGlobe />,
       content: [
-        "You agree to use this website only for lawful purposes.",
-      ],
-      restrictions: [
-        "Attempt unauthorized access",
-        "Distribute harmful software",
-        "Copy website content without permission",
-        "Interfere with website functionality",
-        "Misrepresent your identity",
+        "By using this website, including any chatbot services, content, or marketing materials, you agree to abide by these Terms.",
+        "You are granted a limited, non-exclusive, non-transferable license to access and use our website solely for lawful purposes.",
       ],
     },
     {
       title: "Intellectual Property",
       icon: <FaCopyright />,
       content: [
-        "All website content, including text, graphics, images, logos, layouts, and other materials, is the property of Keentel General Contractors unless otherwise stated.",
-        "Unauthorized reproduction or distribution is prohibited.",
+        "All content, logos, graphics, text, images, videos, and other materials on the website are owned or licensed by Keentel General Contractors and are protected by copyright, trademark, and other intellectual property laws.",
+        "You may not use, reproduce, or distribute any content without our prior written consent.",
       ],
     },
     {
-      title: "Project Information",
+      title: "No Professional Advice or Services",
       icon: <FaInfoCircle />,
       content: [
-        "Information presented on this website is intended for general informational purposes only.",
-        "Project descriptions, service information, timelines, and availability may change without notice.",
+        "The information provided on this website and through chatbot responses is intended solely for educational and marketing purposes. It is not, and should not be construed as, professional advice, guidance, or a substitute for consultation with a licensed Professional Engineer or Electrical Contractor regarding electrical installation, electrical design engineering, or any related services.",
+        "Under Florida law, we strongly advise that you consult with a licensed Professional Engineer or Electrical Contractor before making any decisions concerning your project.",
+        "To facilitate a comprehensive discussion of your project, we invite you to schedule a meeting with us, either in person or via video conference. We are pleased to offer an initial consultation at no cost and with no obligation.",
       ],
     },
     {
-      title: "Estimates & Consultations",
-      icon: <FaClipboardList />,
+      title: "User Obligations",
+      icon: <FaShieldAlt />,
       content: [
-        "Submitting a contact form or requesting an estimate does not create a contractual agreement.",
-        "All proposals are subject to project review, scheduling, availability, and written agreement.",
+        "You agree to use our website and services in compliance with all applicable laws, regulations, and guidelines.",
+        "You are responsible for maintaining the confidentiality of any login credentials you may use to access certain services.",
+        "You agree to promptly notify us if you become aware of any unauthorized use of your credentials.",
       ],
     },
     {
-      title: "Third-Party Links",
+      title: "Understanding Our Privacy Policy and Your Rights",
+      icon: <FaLock />,
+      content: [
+        "Your use of our website and services is also governed by our Privacy Policy, which can be reviewed at our website.",
+        "By using our website, you consent to the collection and use of your information as described in the Privacy Policy.",
+      ],
+    },
+    {
+      title: "Links to Third-Party Websites",
       icon: <FaExternalLinkAlt />,
       content: [
-        "Our website may include links to third-party websites for convenience.",
-        "We do not control or endorse external websites and are not responsible for their content.",
+        "Our website may contain links to third-party websites or services that are not owned or controlled by Keentel General Contractors.",
+        "We are not responsible for the content, privacy practices, or terms of use of these external sites.",
+        "We encourage you to review the privacy policies and terms of use of any third-party websites you visit.",
       ],
     },
     {
       title: "Limitation of Liability",
-      icon: <FaShieldAlt />,
-      content: [
-        "To the maximum extent permitted by law, Keentel General Contractors shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use of this website.",
-      ],
-    },
-    {
-      title: "Disclaimer",
       icon: <FaExclamationCircle />,
       content: [
-        "While we strive to keep all information accurate and current, we do not guarantee that all website content is complete, accurate, or free from errors.",
+        "In no event shall Keentel General Contractors, its directors, officers, employees, or affiliates be held liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from your use of the website, services, or any content provided, even if we have been advised of the possibility of such damages.",
+        "Your sole remedy for dissatisfaction with the website or services is to stop using the website or services.",
       ],
     },
     {
-      title: "Governing Law",
+      title: "Indemnification",
       icon: <FaGavel />,
       content: [
-        "These Terms & Conditions shall be governed by the applicable laws of the State of Florida.",
+        "You agree to indemnify, defend, and hold harmless Keentel General Contractors, its affiliates, officers, employees, and agents from and against any claims, actions, demands, liabilities, or damages, including reasonable attorney fees, arising out of your use of the website, violation of these Terms, or violation of any third-party rights.",
       ],
     },
     {
-      title: "Changes to These Terms",
+      title: "Modifications",
       icon: <FaSyncAlt />,
       content: [
-        "We reserve the right to modify these Terms & Conditions at any time.",
-        "Continued use of the website constitutes acceptance of any updated terms.",
+        "We reserve the right to modify, suspend, or discontinue any aspect of our website, services, or marketing materials at any time without notice.",
+        "We also reserve the right to update or change these Terms at any time. Any changes will be posted on this page with an updated effective date.",
+        "Your continued use of the website after any changes constitutes your acceptance of the updated Terms.",
+      ],
+    },
+    {
+      title: "Governing Law and Dispute Resolution",
+      icon: <FaBalanceScale />,
+      content: [
+        "These Terms shall be governed by and construed in accordance with the laws of the State of Florida, without regard to its conflict of law principles.",
+        "Any disputes arising under or in connection with these Terms shall be resolved through binding arbitration in Florida, and you agree to submit to the exclusive jurisdiction of such arbitration.",
+      ],
+    },
+    {
+      title: "Contact Information",
+      icon: <FaEnvelope />,
+      content: [
+        "If you have any questions about these Terms and Conditions or need to contact us for any reason, please reach out via:",
+        "Keentel General Contractors",
+        "Attn: Terms and Conditions",
+        "Email: contact@keentelgeneralcontractors.com",
       ],
     },
   ];
 
   return (
     <div className={styles["ktc-page"]}>
-      {/* Hero Section */}
+      {/* Hero Section - unchanged */}
       <section className={styles["ktc-hero"]}>
         <video
           autoPlay
@@ -165,54 +185,40 @@ const TermsConditionsPage = () => {
         </div>
       </section>
 
-      {/* Terms Cards Section */}
-      <section className={styles["ktc-terms-grid"]}>
+      {/* Terms Sections - New clean layout */}
+      <section className={styles["ktc-terms"]}>
         <div className={styles["ktc-container"]}>
-          <div className={styles["ktc-intro-text"]}>
+          <div className={styles["ktc-intro"]}>
             <h2 className={styles["ktc-reveal"]}>Your Agreement With Us</h2>
             <p className={styles["ktc-reveal"]}>
-              Please read these terms carefully before using our website or
-              services.
+              Please read these terms carefully before using our website or services.
             </p>
           </div>
 
-          <div className={styles["ktc-cards-wrapper"]}>
+          <div className={styles["ktc-terms-list"]}>
             {termsSections.map((section, idx) => (
               <div
                 key={idx}
-                className={`${styles["ktc-card"]} ${styles["ktc-reveal"]}`}
-                style={{ transitionDelay: `${idx * 0.05}s` }}
+                className={`${styles["ktc-term"]} ${styles["ktc-reveal"]}`}
+                style={{ transitionDelay: `${idx * 0.06}s` }}
               >
-                <div className={styles["ktc-card-media"]}>
-                  <span className={styles["ktc-card-icon"]}>{section.icon}</span>
+                <div className={styles["ktc-term-header"]}>
+                  <span className={styles["ktc-term-number"]}>{idx + 1}</span>
+                  <span className={styles["ktc-term-icon"]}>{section.icon}</span>
+                  <h3 className={styles["ktc-term-title"]}>{section.title}</h3>
                 </div>
-                <div className={styles["ktc-card-body"]}>
-                  <h3>{section.title}</h3>
-                  <ul>
-                    {section.content.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                    {section.restrictions &&
-                      section.restrictions.map((item, i) => (
-                        <li key={`restrict-${i}`} className={styles["ktc-restriction"]}>
-                          {item}
-                        </li>
-                      ))}
-                  </ul>
+                <div className={styles["ktc-term-body"]}>
+                  {section.content.map((item, i) => (
+                    <p key={i}>{item}</p>
+                  ))}
                 </div>
-                <div
-                  className={styles["ktc-card-bg-img"]}
-                  style={{
-                    backgroundImage: `url(/images/terms/card-bg-${(idx % 4) + 1}.jpg)`,
-                  }}
-                />
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Footer */}
+      {/* Contact Footer - unchanged */}
       <section className={styles["ktc-contact"]}>
         <div className={`${styles["ktc-container"]} ${styles["ktc-reveal"]}`}>
           <h2>Contact</h2>
@@ -235,7 +241,7 @@ const TermsConditionsPage = () => {
         </div>
       </section>
 
-      {/* Floating decorative shapes */}
+      {/* Floating decorative shapes - unchanged */}
       <div className={styles["ktc-floating-shape-1"]} />
       <div className={styles["ktc-floating-shape-2"]} />
     </div>

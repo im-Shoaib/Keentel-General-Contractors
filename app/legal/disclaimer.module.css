@@ -1,6 +1,6 @@
-/* app/terms/TermsConditions.module.css */
+/* app/disclaimer/disclaimer.module.css */
 
-.ktc-page {
+.kd-page {
   --color-magenta: #a6238f;
   --color-navy: #12106e;
   --color-white: #ffffff;
@@ -18,14 +18,14 @@
   position: relative;
 }
 
-.ktc-container {
+.kd-container {
   max-width: 860px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* ===== Hero (unchanged) ===== */
-.ktc-hero {
+/* ===== Hero ===== */
+.kd-hero {
   position: relative;
   width: 100%;
   height: 80vh;
@@ -35,7 +35,7 @@
   overflow: hidden;
 }
 
-.ktc-hero-video {
+.kd-hero-video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -49,11 +49,11 @@
   transition: opacity 1.2s ease;
 }
 
-.ktc-hero-video-loaded {
+.kd-hero-video-loaded {
   opacity: 1;
 }
 
-.ktc-hero-overlay {
+.kd-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -64,17 +64,17 @@
   z-index: 1;
 }
 
-.ktc-hero-content {
+.kd-hero-content {
   position: relative;
   z-index: 2;
   text-align: center;
   color: var(--color-white);
   max-width: 800px;
   padding: 0 2rem;
-  animation: ktc-fadeInUp 1s ease forwards;
+  animation: kd-fadeInUp 1s ease forwards;
 }
 
-@keyframes ktc-fadeInUp {
+@keyframes kd-fadeInUp {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -85,7 +85,7 @@
   }
 }
 
-.ktc-hero-badge {
+.kd-hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -97,10 +97,10 @@
   font-weight: 500;
   margin-bottom: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  animation: ktc-softGlow 3s infinite alternate;
+  animation: kd-softGlow 3s infinite alternate;
 }
 
-@keyframes ktc-softGlow {
+@keyframes kd-softGlow {
   from {
     box-shadow: 0 0 8px rgba(166, 35, 143, 0.3);
   }
@@ -109,16 +109,16 @@
   }
 }
 
-.ktc-pulse-dot {
+.kd-pulse-dot {
   display: inline-block;
   width: 8px;
   height: 8px;
   background: #fff;
   border-radius: 50%;
-  animation: ktc-pulse 2s infinite;
+  animation: kd-pulse 2s infinite;
 }
 
-@keyframes ktc-pulse {
+@keyframes kd-pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
   }
@@ -130,7 +130,7 @@
   }
 }
 
-.ktc-hero-title {
+.kd-hero-title {
   font-family: var(--font-heading);
   font-size: clamp(2.8rem, 8vw, 5rem);
   font-weight: 800;
@@ -138,10 +138,10 @@
   margin-bottom: 1rem;
   line-height: 1.1;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  animation: ktc-titleReveal 1.2s ease 0.2s both;
+  animation: kd-titleReveal 1.2s ease 0.2s both;
 }
 
-@keyframes ktc-titleReveal {
+@keyframes kd-titleReveal {
   from {
     clip-path: inset(0 100% 0 0);
     opacity: 0;
@@ -152,30 +152,30 @@
   }
 }
 
-.ktc-hero-subtitle {
+.kd-hero-subtitle {
   font-size: 1.25rem;
   line-height: 1.7;
   opacity: 0.9;
   max-width: 700px;
   margin: 0 auto 2rem;
-  animation: ktc-fadeInUp 1s ease 0.4s both;
+  animation: kd-fadeInUp 1s ease 0.4s both;
 }
 
-.ktc-hero-scroll {
+.kd-hero-scroll {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
   font-size: 0.85rem;
   opacity: 0.8;
-  animation: ktc-fadeInUp 1s ease 0.8s both;
+  animation: kd-fadeInUp 1s ease 0.8s both;
 }
 
-.ktc-bounce-icon {
-  animation: ktc-bounce 2s infinite;
+.kd-bounce-icon {
+  animation: kd-bounce 2s infinite;
 }
 
-@keyframes ktc-bounce {
+@keyframes kd-bounce {
   0%,
   100% {
     transform: translateY(0);
@@ -185,18 +185,18 @@
   }
 }
 
-/* ===== Terms Section (New) ===== */
-.ktc-terms {
+/* ===== Disclaimer Section ===== */
+.kd-disclaimer {
   background: var(--color-off-white);
   padding: 4rem 0 5rem;
 }
 
-.ktc-intro {
+.kd-intro {
   text-align: center;
   margin-bottom: 3.5rem;
 }
 
-.ktc-intro h2 {
+.kd-intro h2 {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 2.8rem);
   color: var(--color-navy);
@@ -204,14 +204,14 @@
   font-weight: 700;
 }
 
-.ktc-intro p {
+.kd-intro p {
   font-size: 1.1rem;
   color: var(--color-text-light);
   line-height: 1.7;
 }
 
-/* Individual term block */
-.ktc-term {
+/* Individual disclaimer block */
+.kd-disclaimer-item {
   background: var(--color-white);
   border-radius: 1rem;
   padding: 2rem 2.5rem;
@@ -221,41 +221,27 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.ktc-term:hover {
+.kd-disclaimer-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(18, 16, 110, 0.06);
 }
 
-.ktc-term-header {
+.kd-disclaimer-header {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 0.75rem;
 }
 
-.ktc-term-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.2rem;
-  height: 2.2rem;
-  background: var(--color-magenta);
-  color: #fff;
-  border-radius: 50%;
-  font-size: 0.9rem;
-  font-weight: 600;
-  flex-shrink: 0;
-}
-
-.ktc-term-icon {
+.kd-disclaimer-icon {
   color: var(--color-magenta);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   display: flex;
   align-items: center;
   flex-shrink: 0;
 }
 
-.ktc-term-title {
+.kd-disclaimer-title {
   font-family: var(--font-heading);
   font-size: 1.3rem;
   font-weight: 600;
@@ -264,61 +250,31 @@
   line-height: 1.3;
 }
 
-.ktc-term-body {
-  padding-left: 3.2rem; /* aligns with the header text */
+.kd-disclaimer-body {
+  padding-left: 3.2rem;
 }
 
-.ktc-term-body p {
+.kd-disclaimer-body p {
   margin: 0.6rem 0;
   line-height: 1.7;
   color: var(--color-text);
   font-size: 1rem;
 }
 
-.ktc-term-body p:first-of-type {
+.kd-disclaimer-body p:first-of-type {
   margin-top: 0;
 }
-.ktc-term-body p:last-of-type {
+.kd-disclaimer-body p:last-of-type {
   margin-bottom: 0;
 }
 
-/* ===== Reveal on scroll ===== */
-.ktc-reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.ktc-reveal-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== Contact Footer (unchanged) ===== */
-.ktc-contact {
-  background: var(--color-navy);
-  color: var(--color-white);
-  padding: 3rem 2rem;
+.kd-disclaimer-cta {
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  margin-top: 2rem;
 }
 
-.ktc-contact h2 {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
-}
-
-.ktc-contact p {
-  font-size: 1rem;
-  opacity: 0.9;
-  max-width: 550px;
-  margin: 0 auto 2rem;
-  line-height: 1.7;
-}
-
-.ktc-btn {
+/* ===== Buttons ===== */
+.kd-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -331,21 +287,57 @@
   transition: background 0.3s, transform 0.2s;
 }
 
-.ktc-btn:hover {
+.kd-btn:hover {
   background: #8e1d7a;
   transform: scale(1.03);
 }
 
-.ktc-btn svg {
+.kd-btn svg {
   transition: transform 0.3s;
 }
 
-.ktc-btn:hover svg {
+.kd-btn:hover svg {
   transform: translateX(4px);
 }
 
-/* ===== Floating Background Shapes (unchanged) ===== */
-.ktc-floating-shape-1 {
+/* ===== Reveal on scroll ===== */
+.kd-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.kd-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Contact Footer ===== */
+.kd-contact {
+  background: var(--color-navy);
+  color: var(--color-white);
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.kd-contact h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.kd-contact p {
+  font-size: 1rem;
+  opacity: 0.9;
+  max-width: 550px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+/* ===== Floating Background Shapes ===== */
+.kd-floating-shape-1 {
   position: fixed;
   top: 15%;
   left: -60px;
@@ -353,12 +345,12 @@
   height: 250px;
   background: radial-gradient(circle, rgba(166, 35, 143, 0.08) 0%, transparent 70%);
   border-radius: 50%;
-  animation: ktc-drift 12s infinite alternate ease-in-out;
+  animation: kd-drift 12s infinite alternate ease-in-out;
   pointer-events: none;
   z-index: 0;
 }
 
-.ktc-floating-shape-2 {
+.kd-floating-shape-2 {
   position: fixed;
   bottom: 10%;
   right: -80px;
@@ -366,12 +358,12 @@
   height: 300px;
   background: radial-gradient(circle, rgba(18, 16, 110, 0.06) 0%, transparent 70%);
   border-radius: 50%;
-  animation: ktc-drift 15s infinite alternate-reverse ease-in-out;
+  animation: kd-drift 15s infinite alternate-reverse ease-in-out;
   pointer-events: none;
   z-index: 0;
 }
 
-@keyframes ktc-drift {
+@keyframes kd-drift {
   from {
     transform: translate(0, 0) rotate(0deg);
   }
@@ -382,34 +374,29 @@
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-  .ktc-container {
+  .kd-container {
     padding: 0 1.25rem;
   }
-  .ktc-hero {
+  .kd-hero {
     height: 70vh;
   }
-  .ktc-hero-title {
+  .kd-hero-title {
     font-size: 2.4rem;
   }
-  .ktc-term {
+  .kd-disclaimer-item {
     padding: 1.5rem;
   }
-  .ktc-term-header {
+  .kd-disclaimer-header {
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
   }
-  .ktc-term-number {
-    width: 1.8rem;
-    height: 1.8rem;
-    font-size: 0.8rem;
+  .kd-disclaimer-icon {
+    font-size: 1.4rem;
   }
-  .ktc-term-icon {
-    font-size: 1.2rem;
-  }
-  .ktc-term-title {
+  .kd-disclaimer-title {
     font-size: 1.1rem;
   }
-  .ktc-term-body {
+  .kd-disclaimer-body {
     padding-left: 0;
     margin-top: 0.5rem;
   }

@@ -81,8 +81,8 @@ export default function ContactPage() {
                 </div>
                 <div className="contact-detail-premium__content">
                   <span className="contact-detail-premium__label">Call Us</span>
-                  <a href="tel:+18133900000" className="contact-detail-premium__value">
-                    (813) 390-0000
+                  <a href="tel:+18133950000" className="contact-detail-premium__value">
+                    813-395-0000
                   </a>
                   <span className="contact-detail-premium__sub">Mon–Sun, 7am–7pm</span>
                 </div>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                 <div className="contact-detail-premium__content">
                   <span className="contact-detail-premium__label">Visit Us</span>
                   <span className="contact-detail-premium__value">
-                    400 North Ashley Drive, Suite 100
+                    400 North Ashley Drive, Suite 2600
                   </span>
                   <span className="contact-detail-premium__sub">
                     Tampa, FL 33602
@@ -130,11 +130,11 @@ export default function ContactPage() {
                 </div>
                 <div className="contact-detail-premium__content">
                   <span className="contact-detail-premium__label">24/7 Emergency</span>
-                  <a href="tel:+18133900000" className="contact-detail-premium__value">
-                    (813) 390-0000
+                  <a href="tel:+18133950000" className="contact-detail-premium__value">
+                    813-395-0000
                   </a>
                   <span className="contact-detail-premium__sub">
-                    Always available — 365 days a year
+                    24/7 available
                   </span>
                 </div>
               </div>
@@ -287,7 +287,7 @@ export default function ContactPage() {
                 <div>
                   <strong>Licensed &amp; insured</strong>
                   <br />
-                  CGC · CPC · CFC — fully protected
+                  CGC · CPC · CFC — fully protected <br/> #CGC1524228 | #EC13014476
                 </div>
               </div>
 
@@ -424,9 +424,9 @@ export default function ContactPage() {
               30 to 60 minutes.
             </p>
 
-            <a href="tel:+18133900000" className="phone-large">
+            <a href="tel:+18133950000" className="phone-large">
               <i className="fas fa-phone"></i>
-              (813) 390-0000
+              813-395-0000
             </a>
 
             <div className="tags">
@@ -465,8 +465,8 @@ export default function ContactPage() {
                 <br />
                 Tampa, FL 33602
               </p>
-              <a href="tel:+18133900000" className="phone-link">
-                <i className="fas fa-phone"></i> (813) 390-0000
+              <a href="tel:+18133950000" className="phone-link">
+                <i className="fas fa-phone"></i> 813-395-0000
               </a>
             </div>
             <div className="location-card reveal reveal-delay-2">
@@ -511,9 +511,9 @@ export default function ContactPage() {
             </h2>
 
             <div className="final-cta__actions">
-              <a href="tel:+18133900000" className="final-cta__phone">
+              <a href="tel:+18133950000" className="final-cta__phone">
                 <i className="fas fa-phone"></i>
-                (813) 390-0000
+                813-395-0000
               </a>
               <a href="#contactformsection" className="final-cta__btn">
                 Request Free Estimate <i className="fas fa-arrow-right"></i>
