@@ -16,7 +16,7 @@ export default function Hero() {
   }, []);
 
 
-  const videoSrc = "https://public-assets.content-platform.envatousercontent.com/0a82f3ca-22ac-4f86-8ae4-f51d648fe55f/1d0c12cd-22db-43ef-ac37-03a1d7c8e0c8/0a82f3ca-22ac-4f86-8ae4-f51d648fe55f/preview_540p_crf22_higher_quality.mp4";
+  const videoSrc = "https://public-assets.content-platform.envatousercontent.com/efe88001-e5cd-4bed-b956-a5eab8022df7/58533e08-bbce-4a05-b55e-f1c27d581a63/efe88001-e5cd-4bed-b956-a5eab8022df7/preview_540p_crf22_higher_quality.mp4";
 
   return (
     <>
